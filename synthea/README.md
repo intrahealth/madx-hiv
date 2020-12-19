@@ -2,7 +2,22 @@
 
 This is a simple and experimental module for generating persons with HIV for the [synthea](https://github.com/synthetichealth/synthea) fake data generator. It is very naive and is not ready for merging into Synthea.
 
-## How to use
+## How to use - Docker
+
+There is a build var `POP` as population created at buildtime not runtime; and a runtime var `FHIR` for which FHIR server.
+
+Run the hosted build. On run it loads patients into the `host.docker.internal:8080/fhir` endpoint. This can be changed using an environment variable, `FHIR`.
+```
+docker run intrahealth/synthea-hiv:latest
+```
+
+Or, build with the number of patients preferred and use your own tag. 200 is the default.
+```
+docker build -t stuff --build-arg POP=100 .
+docker run stuff
+```
+
+## How to Use - Developers
 
 * Download the raw JSON file of the module or clone the repo and git pull for future updates.
 
