@@ -7,7 +7,7 @@ RUN wget https://github.com/synthetichealth/synthea/releases/download/v2.6.1/syn
 
 RUN git clone https://github.com/intrahealth/madx-hiv.git
 
-ARG POP=200
+ARG POP=100
 
 RUN java -jar synthea-with-dependencies-jdk8.jar \
     -p ${POP} \

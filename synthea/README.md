@@ -11,7 +11,7 @@ Run the hosted build. On run it loads patients into the `host.docker.internal:80
 docker run intrahealth/synthea-hiv:latest
 ```
 
-Or, build with the number of patients preferred and use your own tag. 200 is the default.
+Or, build with the number of patients preferred and use your own tag. 100 is the default.
 ```
 docker build -t stuff --build-arg POP=100 .
 docker run stuff
