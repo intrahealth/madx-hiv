@@ -1,0 +1,130 @@
+{
+  "name": "HIV Simple",
+  "remarks": [
+    "Module is a proof-of-concept, do not use outside of experimentation."
+  ],
+  "states": {
+    "Initial": {
+      "type": "Initial",
+      "distributed_transition": [
+        {
+          "transition": "HIV Test Positive",
+          "distribution": 0.5
+        },
+        {
+          "transition": "HIV Test Negative",
+          "distribution": 0.5
+        }
+      ]
+    },
+    "Terminal": {
+      "type": "Terminal"
+    },
+    "Has HIV": {
+      "type": "ConditionOnset",
+      "target_encounter": "",
+      "codes": [
+        {
+          "system": "SNOMED-CT",
+          "code": 86406008,
+          "display": "HIV Status"
+        }
+      ],
+      "distributed_transition": [
+        {
+          "transition": "ART Medication",
+          "distribution": 0.5
+        },
+        {
+          "transition": "Delay",
+          "distribution": 0.5
+        }
+      ]
+    },
+    "ART Medication": {
+      "type": "MedicationOrder",
+      "codes": [
+        {
+          "system": "RxNorm",
+          "code": "1234",
+          "display": "RxNorm Code"
+        }
+      ],
+      "direct_transition": "Terminal"
+    },
+    "HIV Test Positive": {
+      "type": "DiagnosticReport",
+      "codes": [
+        {
+          "system": "LOINC",
+          "code": "75622-1",
+          "display": "HIV types 1 and 2 testing"
+        }
+      ],
+      "observations": [
+        {
+          "category": "laboratory",
+          "unit": "",
+          "codes": [
+            {
+              "system": "LOINC",
+              "code": "75622-1",
+              "display": "LOINC Code"
+            }
+          ],
+          "value_code": {
+            "system": "SNOMED-CT",
+            "code": 165816005,
+            "display": "HIV Positive"
+          }
+        }
+      ],
+      "direct_transition": "Has HIV"
+    },
+    "HIV Test Negative": {
+      "type": "DiagnosticReport",
+      "codes": [
+        {
+          "system": "LOINC",
+          "code": "75622-1",
+          "display": "HIV types 1 and 2 testing"
+        }
+      ],
+      "observations": [
+        {
+          "category": "laboratory",
+          "unit": "",
+          "codes": [
+            {
+              "system": "LOINC",
+              "code": "75622-1",
+              "display": "LOINC Code"
+            }
+          ],
+          "value_code": {
+            "system": "SNOMED-CT",
+            "code": 165815009,
+            "display": "HIV Negative"
+          }
+        }
+      ],
+      "direct_transition": "Terminal"
+    },
+    "Delay": {
+      "type": "Delay",
+      "exact": {
+        "quantity": 4,
+        "unit": "years"
+      },
+      "direct_transition": "Death"
+    },
+    "Death": {
+      "type": "Death",
+      "exact": {
+        "quantity": 1,
+        "unit": "days"
+      },
+      "direct_transition": "Terminal"
+    }
+  }
+}
