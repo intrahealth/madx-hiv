@@ -1,10 +1,6 @@
 FROM openjdk:8-jre-alpine3.9
-# FROM openjdk:8
-
 RUN apk --no-cache add openssl wget git curl
-
 RUN wget https://github.com/synthetichealth/synthea/releases/download/v2.6.1/synthea-with-dependencies-jdk8.jar
-
 RUN git clone https://github.com/intrahealth/madx-hiv.git
 
 ARG POP=100
@@ -17,13 +13,23 @@ RUN java -jar synthea-with-dependencies-jdk8.jar \
     # seed to create the same patients every time
     -s 123
 
+# ENV DOCKERIZE_VERSION v0.5.0
+# RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
+#     && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
+#     && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
+
+FROM curlimages/curl:7.74.0
+# COPY --from=0 /usr/local/bin/dockerize /usr/local/bin/
+USER curl_user
+WORKDIR /home/curl_user
+COPY --from=0 output/fhir/* .
 
 ARG FHIR=http://host.docker.internal:8080/fhir
 ENV FHIR=$FHIR
 
-# application/fhir+ndjson doesn't work
-# hapi error is: Incorrect Content-Type header value of "application/fhir+ndjson;charset=utf-8" was provided in the request. A FHIR Content-Type is required for "TRANSACTION" operation
-CMD for FILE in ./output/fhir/*; do curl -X POST -H "Content-Type: application/fhir+json" -d @$FILE ${FHIR} ; done
+# CMD dockerize -wait ${FHIR}/metadata for FILE in * ; do curl -X POST -H "Content-Type: application/fhir+json" -d @$FILE ${FHIR} ; done
+# errors with dockerize, comment out for now
+CMD for FILE in * ; do curl -X POST -H "Content-Type: application/fhir+json" -d @$FILE ${FHIR} ; done
 
 
 
