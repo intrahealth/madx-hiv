@@ -4,16 +4,24 @@ This is a simple and experimental module for generating persons with HIV for the
 
 ## How to use - Docker
 
+> The docker images use a multipart build process so the final compressed images are under 20MB.
+
 There is a build var `POP` as population created at buildtime not runtime; and a runtime var `FHIR` for which FHIR server.
 
 Run the hosted build. On run it loads patients into the `host.docker.internal:8080/fhir` endpoint. This can be changed using an environment variable, `FHIR`.
-```
+```bash
 docker run intrahealth/synthea-hiv:latest
+# same as intrahealth/synthea-hiv:100
+```
+
+There is also an image with 1000 patients, use:
+```
+docker run intrahealth/synthea-hiv:pop1000
 ```
 
 Or, build with the number of patients preferred and use your own tag. 100 is the default.
-```
-docker build -t stuff --build-arg POP=100 .
+```bash
+docker build -t stuff --build-arg POP=200 .
 docker run stuff
 ```
 
@@ -22,7 +30,7 @@ docker run stuff
 * Download the raw JSON file of the module or clone the repo and git pull for future updates.
 
 * Clone synthea and change to the directory
-```
+```bash
 git clone https://github.com/synthetichealth/synthea.git
 cd synthea
 ./gradlew build check test
@@ -34,8 +42,8 @@ cp /Users/richard/downloads/hiv_simple.json src/main/resources/modules/
 ```
 
 Generate patients:
-```
-./run_synthea -p 100 -m hiv_simple:
+```bash
+./run_synthea -p 100 -m hiv_simple*
 ```
 
 The patient records in FHIR are in `output/fhir`
