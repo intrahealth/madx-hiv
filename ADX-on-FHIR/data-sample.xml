@@ -1,0 +1,177 @@
+<adx>
+	<group orgUnit="ZW01" period="2017-01-01/P1M">
+		<dataValue dataElement="QRPH_ADX_ART1_N" AGE_GROUP="P0Y--P1Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART1_N" AGE_GROUP="P0Y--P1Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART1_N" AGE_GROUP="P1Y--P10Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART1_N" AGE_GROUP="P1Y--P10Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART1_N" AGE_GROUP="P10Y--P15Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART1_N" AGE_GROUP="P10Y--P15Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART1_N" AGE_GROUP="P15Y--P20Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART1_N" AGE_GROUP="P15Y--P20Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART1_N" AGE_GROUP="P20Y--P25Y " SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART1_N" AGE_GROUP="P20Y--P25Y " SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART1_N" AGE_GROUP="P25Y--P30Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART1_N" AGE_GROUP="P25Y--P30Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART1_N" AGE_GROUP="P30Y--P35Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART1_N" AGE_GROUP="P30Y--P35Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART1_N" AGE_GROUP="P35Y--P40Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART1_N" AGE_GROUP="P35Y--P40Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART1_N" AGE_GROUP="P40Y--P50Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART1_N" AGE_GROUP="P40Y--P50Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART1_N" AGE_GROUP="P50Y--P9999Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART1_N" AGE_GROUP="P50Y--P9999Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART1_N_PREG_BF" PREG_BF="146789000" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART1_N_PREG_BF" PREG_BF="169750002" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART3_N" AGE_GROUP="P0Y--P1Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART3_N" AGE_GROUP="P0Y--P1Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART3_N" AGE_GROUP="P1Y--P10Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART3_N" AGE_GROUP="P1Y--P10Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART3_N" AGE_GROUP="P10Y--P15Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART3_N" AGE_GROUP="P10Y--P15Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART3_N" AGE_GROUP="P15Y--P20Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART3_N" AGE_GROUP="P15Y--P20Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART3_N" AGE_GROUP="P20Y--P25Y " SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART3_N" AGE_GROUP="P20Y--P25Y " SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART3_N" AGE_GROUP="P25Y--P30Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART3_N" AGE_GROUP="P25Y--P30Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART3_N" AGE_GROUP="P30Y--P35Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART3_N" AGE_GROUP="P30Y--P35Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART3_N" AGE_GROUP="P35Y--P40Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART3_N" AGE_GROUP="P35Y--P40Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART3_N" AGE_GROUP="P40Y--P50Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART3_N" AGE_GROUP="P40Y--P50Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART3_N" AGE_GROUP="P50Y--P9999Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART3_N" AGE_GROUP="P50Y--P9999Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_D" AGE_GROUP="P0Y--P1Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_D" AGE_GROUP="P0Y--P1Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_D" AGE_GROUP="P1Y--P10Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_D" AGE_GROUP="P1Y--P10Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_D" AGE_GROUP="P10Y--P15Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_D" AGE_GROUP="P10Y--P15Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_D" AGE_GROUP="P15Y--P20Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_D" AGE_GROUP="P15Y--P20Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_D" AGE_GROUP="P20Y--P25Y " SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_D" AGE_GROUP="P20Y--P25Y " SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_D" AGE_GROUP="P25Y--P30Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_D" AGE_GROUP="P25Y--P30Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_D" AGE_GROUP="P30Y--P35Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_D" AGE_GROUP="P30Y--P35Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_D" AGE_GROUP="P35Y--P40Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_D" AGE_GROUP="P35Y--P40Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_D" AGE_GROUP="P40Y--P50Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_D" AGE_GROUP="P40Y--P50Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_D" AGE_GROUP="P50Y--P9999Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_D" AGE_GROUP="P50Y--P9999Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_N" AGE_GROUP="P0Y--P1Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_N" AGE_GROUP="P0Y--P1Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_N" AGE_GROUP="P1Y--P10Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_N" AGE_GROUP="P1Y--P10Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_N" AGE_GROUP="P10Y--P15Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_N" AGE_GROUP="P10Y--P15Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_N" AGE_GROUP="P15Y--P20Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_N" AGE_GROUP="P15Y--P20Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_N" AGE_GROUP="P20Y--P25Y " SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_N" AGE_GROUP="P20Y--P25Y " SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_N" AGE_GROUP="P25Y--P30Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_N" AGE_GROUP="P25Y--P30Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_N" AGE_GROUP="P30Y--P35Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_N" AGE_GROUP="P30Y--P35Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_N" AGE_GROUP="P35Y--P40Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_N" AGE_GROUP="P35Y--P40Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_N" AGE_GROUP="P40Y--P50Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_N" AGE_GROUP="P40Y--P50Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_N" AGE_GROUP="P50Y--P9999Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_N" AGE_GROUP="P50Y--P9999Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_N_PREG_BF" PREG_BF="146789000" value="0"/>
+		<dataValue dataElement="QRPH_ADX_ART5_N_PREG_BF" PREG_BF="169750002" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P0Y--P1Y" SEX="F" HIV_TEST_RESULTS="165815009" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P0Y--P1Y" SEX="F" HIV_TEST_RESULTS="165816005" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P0Y--P1Y" SEX="M" HIV_TEST_RESULTS="165815009" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P0Y--P1Y" SEX="M" HIV_TEST_RESULTS="165816005" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P1Y--P10Y" SEX="F" HIV_TEST_RESULTS="165815009" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P1Y--P10Y" SEX="F" HIV_TEST_RESULTS="165816005" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P1Y--P10Y" SEX="M" HIV_TEST_RESULTS="165815009" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P1Y--P10Y" SEX="M" HIV_TEST_RESULTS="165816005" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P10Y--P15Y" SEX="F" HIV_TEST_RESULTS="165815009" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P10Y--P15Y" SEX="F" HIV_TEST_RESULTS="165816005" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P10Y--P15Y" SEX="M" HIV_TEST_RESULTS="165815009" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P10Y--P15Y" SEX="M" HIV_TEST_RESULTS="165816005" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P15Y--P20Y" SEX="F" HIV_TEST_RESULTS="165815009" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P15Y--P20Y" SEX="F" HIV_TEST_RESULTS="165816005" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P15Y--P20Y" SEX="M" HIV_TEST_RESULTS="165815009" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P15Y--P20Y" SEX="M" HIV_TEST_RESULTS="165816005" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P20Y--P25Y " SEX="F" HIV_TEST_RESULTS="165815009" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P20Y--P25Y " SEX="F" HIV_TEST_RESULTS="165816005" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P20Y--P25Y " SEX="M" HIV_TEST_RESULTS="165815009" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P20Y--P25Y " SEX="M" HIV_TEST_RESULTS="165816005" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P25Y--P30Y" SEX="F" HIV_TEST_RESULTS="165815009" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P25Y--P30Y" SEX="F" HIV_TEST_RESULTS="165816005" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P25Y--P30Y" SEX="M" HIV_TEST_RESULTS="165815009" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P25Y--P30Y" SEX="M" HIV_TEST_RESULTS="165816005" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P30Y--P35Y" SEX="F" HIV_TEST_RESULTS="165815009" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P30Y--P35Y" SEX="F" HIV_TEST_RESULTS="165816005" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P30Y--P35Y" SEX="M" HIV_TEST_RESULTS="165815009" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P30Y--P35Y" SEX="M" HIV_TEST_RESULTS="165816005" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P35Y--P40Y" SEX="F" HIV_TEST_RESULTS="165815009" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P35Y--P40Y" SEX="F" HIV_TEST_RESULTS="165816005" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P35Y--P40Y" SEX="M" HIV_TEST_RESULTS="165815009" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P35Y--P40Y" SEX="M" HIV_TEST_RESULTS="165816005" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P40Y--P50Y" SEX="F" HIV_TEST_RESULTS="165815009" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P40Y--P50Y" SEX="F" HIV_TEST_RESULTS="165816005" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P40Y--P50Y" SEX="M" HIV_TEST_RESULTS="165815009" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P40Y--P50Y" SEX="M" HIV_TEST_RESULTS="165816005" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P50Y--P9999Y" SEX="F" HIV_TEST_RESULTS="165815009" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P50Y--P9999Y" SEX="F" HIV_TEST_RESULTS="165816005" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P50Y--P9999Y" SEX="M" HIV_TEST_RESULTS="165815009" value="0"/>
+		<dataValue dataElement="QRPH_ADX_HTS2_N" AGE_GROUP="P50Y--P9999Y" SEX="M" HIV_TEST_RESULTS="165816005" value="0"/>
+		<dataValue dataElement="QRPH_ADX_MTCT1_D" PMTCT_HIV_STATUS="165816005**" value="0"/>
+		<dataValue dataElement="QRPH_ADX_MTCT1_D" PMTCT_HIV_STATUS="165816005*" value="0"/>
+		<dataValue dataElement="QRPH_ADX_MTCT1_D" PMTCT_HIV_STATUS="165815009*" value="0"/>
+		<dataValue dataElement="QRPH_ADX_MTCT1_N" PMTCT_HIV_STATUS="165816005**" value="0"/>
+		<dataValue dataElement="QRPH_ADX_MTCT1_N" PMTCT_HIV_STATUS="165816005*" value="0"/>
+		<dataValue dataElement="QRPH_ADX_MTCT1_N" PMTCT_HIV_STATUS="165815009*" value="0"/>
+		<dataValue dataElement="QRPH_ADX_MTCT2_D" value="0"/>
+		<dataValue dataElement="QRPH_ADX_MTCT2_N" PMTCT_ART_STATUS="432101000124108" value="0"/>
+		<dataValue dataElement="QRPH_ADX_MTCT2_N" PMTCT_ART_STATUS="432101000124108*" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_D" AGE_GROUP="P0Y--P1Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_D" AGE_GROUP="P0Y--P1Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_D" AGE_GROUP="P1Y--P10Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_D" AGE_GROUP="P1Y--P10Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_D" AGE_GROUP="P10Y--P15Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_D" AGE_GROUP="P10Y--P15Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_D" AGE_GROUP="P15Y--P20Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_D" AGE_GROUP="P15Y--P20Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_D" AGE_GROUP="P20Y--P25Y " SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_D" AGE_GROUP="P20Y--P25Y " SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_D" AGE_GROUP="P25Y--P30Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_D" AGE_GROUP="P25Y--P30Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_D" AGE_GROUP="P30Y--P35Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_D" AGE_GROUP="P30Y--P35Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_D" AGE_GROUP="P35Y--P40Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_D" AGE_GROUP="P35Y--P40Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_D" AGE_GROUP="P40Y--P50Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_D" AGE_GROUP="P40Y--P50Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_D" AGE_GROUP="P50Y--P9999Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_D" AGE_GROUP="P50Y--P9999Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_N" AGE_GROUP="P0Y--P1Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_N" AGE_GROUP="P0Y--P1Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_N" AGE_GROUP="P1Y--P10Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_N" AGE_GROUP="P1Y--P10Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_N" AGE_GROUP="P10Y--P15Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_N" AGE_GROUP="P10Y--P15Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_N" AGE_GROUP="P15Y--P20Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_N" AGE_GROUP="P15Y--P20Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_N" AGE_GROUP="P20Y--P25Y " SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_N" AGE_GROUP="P20Y--P25Y " SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_N" AGE_GROUP="P25Y--P30Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_N" AGE_GROUP="P25Y--P30Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_N" AGE_GROUP="P30Y--P35Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_N" AGE_GROUP="P30Y--P35Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_N" AGE_GROUP="P35Y--P40Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_N" AGE_GROUP="P35Y--P40Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_N" AGE_GROUP="P40Y--P50Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_N" AGE_GROUP="P40Y--P50Y" SEX="M" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_N" AGE_GROUP="P50Y--P9999Y" SEX="F" value="0"/>
+		<dataValue dataElement="QRPH_ADX_VLS3_N" AGE_GROUP="P50Y--P9999Y" SEX="M" value="0"/>
+	</group>
+</adx>

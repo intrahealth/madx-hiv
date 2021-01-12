@@ -1,0 +1,37 @@
+<MeasureReport>
+  <measure>
+    <reference value="Measure/ADX_HIV"/>
+  </measure>
+  <group>
+    <identifier><value value="QRPH_ADX_ART1_N"></identifier>
+    <measureScore value="0"/>
+    <stratifier>
+      <identifier><value value="AGE_GROUP:SEX"></identifier>
+      <stratum>
+        <value value="P0Y--P1Y:F"/>
+        <measureScore value="0"/>
+      </stratum>
+      <stratum>
+        <value value="P0Y--P1Y:M"/>
+        <measureScore value="0"/>
+      </stratum>
+      <stratum>
+        <value value="P1Y--P5Y:F"/>
+        <measureScore value="0"/>
+      </stratum>
+      <stratum>
+        <value value="P1Y--P5Y:M"/>
+        <measureScore value="0"/>
+      </stratum>
+      <stratum>
+        <value value="P10Y--P15Y:F"/>
+        <measureScore value="0"/>
+      </stratum>
+      <stratum>
+        <value value="P10Y--P15Y:M"/>
+        <measureScore value="0"/>
+      </stratum>
+      ...
+    </stratifier>
+  </group>
+</MeasureReport>

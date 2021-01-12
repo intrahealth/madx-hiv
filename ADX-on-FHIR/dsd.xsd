@@ -1,0 +1,114 @@
+<xs:schema targetNamespace="urn:ihe:qrph:adx:2015" elementFormDefault="qualified">
+	<xs:annotation>
+		<xs:documentation> This is an example of a tightly constrained schema which should
+                    validate an adx data document which has been formed in compliance with the
+                    sample SDMX DSD. </xs:documentation>
+	</xs:annotation>
+	<xs:import namespace="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" schemaLocation="sdmx/SDMXCommon.xsd"/>
+	<xs:simpleType name="CL_ORGUNIT_IHE_QRPH_1.0_Type">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="NULLISDC"/>
+			<xs:enumeration value="NULLISDN"/>
+			<xs:enumeration value="NULLISDS"/>
+			<xs:enumeration value="NULLISDW"/>
+			<xs:enumeration value="NULLISD"/>
+			<xs:enumeration value="NULLISDE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CL_DATAELEMENT_IHE_QRPH_1.0_Type">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="QRPH_ADX_ART1_N_PREG_BF"/>
+			<xs:enumeration value="QRPH_ADX_HTS2_N"/>
+			<xs:enumeration value="QRPH_ADX_ART5_D"/>
+			<xs:enumeration value="QRPH_ADX_ART3_N"/>
+			<xs:enumeration value="QRPH_ADX_ART1_N"/>
+			<xs:enumeration value="QRPH_ADX_MTCT2_N"/>
+			<xs:enumeration value="QRPH_ADX_VLS3_N"/>
+			<xs:enumeration value="QRPH_ADX_MTCT2_D"/>
+			<xs:enumeration value="QRPH_ADX_MTCT1_N"/>
+			<xs:enumeration value="QRPH_ADX_ART5_N_PREG_BF"/>
+			<xs:enumeration value="QRPH_ADX_VLS3_D"/>
+			<xs:enumeration value="QRPH_ADX_ART5_N"/>
+			<xs:enumeration value="QRPH_ADX_MTCT1_D"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CL_HIV_TEST_RESULTS_IHE_QRPH_1.0_Type">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="165815009"/>
+			<xs:enumeration value="165816005"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CL_SEX_IHE_QRPH_1.0_Type">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="F"/>
+			<xs:enumeration value="M"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CL_PMTCT_HIV_STATUS_IHE_QRPH_1.0_Type">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="165816005**"/>
+			<xs:enumeration value="165816005*"/>
+			<xs:enumeration value="165815009*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CL_PMTCT_ART_STATUS_IHE_QRPH_1.0_Type">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="432101000124108"/>
+			<xs:enumeration value="432101000124108*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CL_AGE_GROUP_IHE_QRPH_1.0_Type">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="P0Y--P1Y"/>
+			<xs:enumeration value="P1Y--P5Y"/>
+			<xs:enumeration value="P10Y--P15Y"/>
+			<xs:enumeration value="P15Y--P20Y"/>
+			<xs:enumeration value="P20Y--P25Y "/>
+			<xs:enumeration value="P25Y--P30Y"/>
+			<xs:enumeration value="P30Y--P35Y"/>
+			<xs:enumeration value="P35Y--P40Y"/>
+			<xs:enumeration value="P40Y--P50Y"/>
+			<xs:enumeration value="P50Y--P9999Y"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CL_PREG_BF_IHE_QRPH_1.0_Type">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="146789000"/>
+			<xs:enumeration value="169750002"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="periodType">
+		<xs:restriction base="common:TimeRangeType"/>
+	</xs:simpleType>
+	<xs:complexType name="adxType">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="group" type="groupType"/>
+		</xs:sequence>
+		<xs:attribute name="exported" use="required" type="xs:dateTime"/>
+		<xs:anyAttribute processContents="skip"/>
+	</xs:complexType>
+	<xs:complexType name="groupType">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="dataValue" type="DataValueType"/>
+		</xs:sequence>
+		<xs:attribute name="dataSet" use="required" type="xs:string" fixed="DSD_ADX_HIV"/>
+		<xs:attribute name="orgUnit" use="required" type="CL_ORGUNIT_IHE_QRPH_1.0_Type"/>
+		<xs:attribute name="period" use="required" type="periodType"/>
+		<xs:anyAttribute processContents="skip"/>
+	</xs:complexType>
+	<xs:complexType name="DataValueType">
+		<xs:sequence maxOccurs="1" minOccurs="0">
+			<xs:element name="annotation"/>
+		</xs:sequence>
+		<xs:attribute name="dataElement" use="required" type="CL_DATAELEMENT_IHE_QRPH_1.0_Type"/>
+		<xs:attribute name="value" use="required" type="xs:decimal"/>
+		<xs:attribute name="PREG_BF" type="CL_PREG_BF_IHE_QRPH_1.0_Type" use="optional"/>
+		<xs:attribute name="AGE_GROUP" type="CL_AGE_GROUP_IHE_QRPH_1.0_Type" use="optional"/>
+		<xs:attribute name="SEX" type="CL_SEX_IHE_QRPH_1.0_Type" use="optional"/>
+		<xs:attribute name="HIV_TEST_RESULTS" type="CL_HIV_TEST_RESULTS_IHE_QRPH_1.0_Type" use="optional"/>
+		<xs:attribute name="PMTCT_ART_STATUS" type="CL_PMTCT_ART_STATUS_IHE_QRPH_1.0_Type" use="optional"/>
+		<xs:attribute name="PMTCT_HIV_STATUS" type="CL_PMTCT_HIV_STATUS_IHE_QRPH_1.0_Type" use="optional"/>
+		<xs:anyAttribute processContents="skip"/>
+	</xs:complexType>
+	<xs:element name="adx" type="adxType"/>
+</xs:schema>

@@ -1,0 +1,417 @@
+<?xml-model href="../schema/dsd_validation.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<mes:Structure xsi:schemaLocation="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message ../schema/sdmx/SDMXMessage.xsd">
+	<mes:Header>
+		<mes:ID>DSD_ADX_HIV</mes:ID>
+		<mes:Test>false</mes:Test>
+		<mes:Prepared>2018-08-03T11:42:02.00Z</mes:Prepared>
+		<mes:Sender id="DHIS2_OPENHIE_SANDBOX"/>
+	</mes:Header>
+	<mes:Structures>
+		<str:Codelists>
+			<Codelist id="CL_ORGUNIT" agencyID="IHE_QRPH" version="1.0">
+				<Name xml:lang="en">OrgUnit code list</Name>
+				<Code id="NULLISDC">
+					<Name xml:lang="en">Null Island Central</Name>
+				</Code>
+				<Code id="NULLISDN">
+					<Name xml:lang="en">Null Island North</Name>
+				</Code>
+				<Code id="NULLISDS">
+					<Name xml:lang="en">Null Island South</Name>
+				</Code>
+				<Code id="NULLISDW">
+					<Name xml:lang="en">Null Island West</Name>
+				</Code>
+				<Code id="NULLISD">
+					<Name xml:lang="en">Null Island</Name>
+				</Code>
+				<Code id="NULLISDE">
+					<Name xml:lang="en">Null Island East</Name>
+				</Code>
+			</Codelist>
+			<Codelist id="CL_DATAELEMENT" agencyID="IHE_QRPH" version="1.0">
+				<Name xml:lang="en">DataElement code list</Name>
+				<Code id="QRPH_ADX_MTCT2_N">
+					<Annotations>
+						<Annotation id="Disaggregation">
+							<AnnotationText>PMTCT_ART_STATUS</AnnotationText>
+						</Annotation>
+					</Annotations>
+					<Name xml:lang="en">Number of HIV-positive pregnant women who received ART to reduce the risk of mother-to-child-transmission during pregnancy</Name>
+				</Code>
+				<Code id="QRPH_ADX_MTCT1_D">
+					<Annotations>
+						<Annotation id="Disaggregation">
+							<AnnotationText>PMTCT_HIV_STATUS</AnnotationText>
+						</Annotation>
+					</Annotations>
+					<Name xml:lang="en">Number of pregnant women who attended ANC or had a facility-based delivery in the reporting period</Name>
+				</Code>
+				<Code id="QRPH_ADX_VLS3_D">
+					<Annotations>
+						<Annotation id="Disaggregation">
+							<AnnotationText>AGE_GROUP</AnnotationText>
+						</Annotation>
+						<Annotation id="Disaggregation">
+							<AnnotationText>SEX</AnnotationText>
+						</Annotation>
+					</Annotations>
+					<Name xml:lang="en">Number of people on ART who had a VL measurement in the past 12 months.</Name>
+				</Code>
+				<Code id="QRPH_ADX_ART5_N_PREG_BF">
+					<Annotations>
+						<Annotation id="Disaggregation">
+							<AnnotationText>PREG_BF</AnnotationText>
+						</Annotation>
+					</Annotations>
+					<Name xml:lang="en">Number of adults and children who are still on treatment at 12 months after initiating ART-pregnant and breastfeeding</Name>
+				</Code>
+				<Code id="QRPH_ADX_ART1_N_PREG_BF">
+					<Annotations>
+						<Annotation id="Disaggregation">
+							<AnnotationText>PREG_BF</AnnotationText>
+						</Annotation>
+					</Annotations>
+					<Name xml:lang="en">Number of adults and children newly enrolled on ART in the reporting period_pregnant and breastfeeding</Name>
+				</Code>
+				<Code id="QRPH_ADX_MTCT2_D">
+					<Name xml:lang="en">Number of HIV positive pregnant women who attended ANC or had a facility-based delivery within the reporting period</Name>
+				</Code>
+				<Code id="QRPH_ADX_HTS2_N">
+					<Annotations>
+						<Annotation id="Disaggregation">
+							<AnnotationText>AGE_GROUP</AnnotationText>
+						</Annotation>
+						<Annotation id="Disaggregation">
+							<AnnotationText>SEX</AnnotationText>
+						</Annotation>
+						<Annotation id="Disaggregation">
+							<AnnotationText>HIV_TEST_RESULTS</AnnotationText>
+						</Annotation>
+					</Annotations>
+					<Name xml:lang="en">Number of individuals who received HIV Testing Services (HTS) and received their test results</Name>
+				</Code>
+				<Code id="QRPH_ADX_MTCT1_N">
+					<Annotations>
+						<Annotation id="Disaggregation">
+							<AnnotationText>PMTCT_HIV_STATUS</AnnotationText>
+						</Annotation>
+					</Annotations>
+					<Name xml:lang="en">Number of pregnant women with known HIV status at first antenatal care visit</Name>
+				</Code>
+				<Code id="QRPH_ADX_VLS3_N">
+					<Annotations>
+						<Annotation id="Disaggregation">
+							<AnnotationText>AGE_GROUP</AnnotationText>
+						</Annotation>
+						<Annotation id="Disaggregation">
+							<AnnotationText>SEX</AnnotationText>
+						</Annotation>
+					</Annotations>
+					<Name xml:lang="en">Number of people living with HIV and on ART who have a suppressed viral load results ( less than1000 copies/mL).</Name>
+				</Code>
+				<Code id="QRPH_ADX_ART5_N">
+					<Annotations>
+						<Annotation id="Disaggregation">
+							<AnnotationText>AGE_GROUP</AnnotationText>
+						</Annotation>
+						<Annotation id="Disaggregation">
+							<AnnotationText>SEX</AnnotationText>
+						</Annotation>
+					</Annotations>
+					<Name xml:lang="en">Number of adults and children who are still on treatment at 12 months after initiating ART</Name>
+				</Code>
+				<Code id="QRPH_ADX_ART3_N">
+					<Annotations>
+						<Annotation id="Disaggregation">
+							<AnnotationText>AGE_GROUP</AnnotationText>
+						</Annotation>
+						<Annotation id="Disaggregation">
+							<AnnotationText>SEX</AnnotationText>
+						</Annotation>
+					</Annotations>
+					<Name xml:lang="en">Number of adults and children currently receiving antiretroviral therapy (ART)</Name>
+				</Code>
+				<Code id="QRPH_ADX_ART1_N">
+					<Annotations>
+						<Annotation id="Disaggregation">
+							<AnnotationText>AGE_GROUP</AnnotationText>
+						</Annotation>
+						<Annotation id="Disaggregation">
+							<AnnotationText>SEX</AnnotationText>
+						</Annotation>
+					</Annotations>
+					<Name xml:lang="en">Number of adults and children newly enrolled on antiretroviral therapy (ART) in the reporting period</Name>
+				</Code>
+				<Code id="QRPH_ADX_ART5_D">
+					<Annotations>
+						<Annotation id="Disaggregation">
+							<AnnotationText>AGE_GROUP</AnnotationText>
+						</Annotation>
+						<Annotation id="Disaggregation">
+							<AnnotationText>SEX</AnnotationText>
+						</Annotation>
+					</Annotations>
+					<Name xml:lang="en">Total number of adults and children who initiated ART in the 12 months prior to the beginning of the reporting period</Name>
+				</Code>
+			</Codelist>
+			<Codelist id="CL_HIV_TEST_RESULTS" agencyID="IHE_QRPH" version="1.0">
+				<Name xml:lang="en">HIV test results</Name>
+				<Code id="165815009">
+					<Name xml:lang="en">HIV Negative</Name>
+				</Code>
+				<Code id="165816005">
+					<Name xml:lang="en">HIV Positive</Name>
+				</Code>
+			</Codelist>
+			<Codelist id="CL_SEX" agencyID="IHE_QRPH" version="1.0">
+				<Name xml:lang="en">Sex</Name>
+				<Code id="F">
+					<Name xml:lang="en">Female</Name>
+				</Code>
+				<Code id="M">
+					<Name xml:lang="en">Male</Name>
+				</Code>
+			</Codelist>
+			<Codelist id="CL_PREG_BF" agencyID="IHE_QRPH" version="1.0">
+				<Name xml:lang="en">Pregnancy/Breastfeeding</Name>
+				<Code id="146789000">
+					<Name xml:lang="en">Pregnant</Name>
+				</Code>
+				<Code id="169750002">
+					<Name xml:lang="en">Breastfeeding</Name>
+				</Code>
+			</Codelist>
+			<Codelist id="CL_AGE_GROUP" agencyID="IHE_QRPH" version="1.0">
+				<Name xml:lang="en">Age group</Name>
+				<Code id="P0Y--P1Y">
+					<Name xml:lang="en">Less than 1 year</Name>
+				</Code>
+				<Code id="P1Y--P5Y">
+					<Name xml:lang="en">1- 4Years</Name>
+				</Code>
+				<Code id="P10Y--P15Y">
+					<Name xml:lang="en">10-14 Years</Name>
+				</Code>
+				<Code id="P15Y--P20Y">
+					<Name xml:lang="en">15-19 Years</Name>
+				</Code>
+				<Code id="P20Y--P25Y ">
+					<Name xml:lang="en">20-24 Years</Name>
+				</Code>
+				<Code id="P25Y--P30Y">
+					<Name xml:lang="en">25-29 Years</Name>
+				</Code>
+				<Code id="P30Y--P35Y">
+					<Name xml:lang="en">30-34 Years</Name>
+				</Code>
+				<Code id="P35Y--P40Y">
+					<Name xml:lang="en">35-39 Years</Name>
+				</Code>
+				<Code id="P40Y--P50Y">
+					<Name xml:lang="en">40-49 Years</Name>
+				</Code>
+				<Code id="P50Y--P9999Y">
+					<Name xml:lang="en">50+ Years</Name>
+				</Code>
+				<Code id="P5Y--P10Y">
+					<Name xml:lang="en">5-9 Years</Name>
+				</Code>
+			</Codelist>
+			<Codelist id="CL_PMTCT_HIV_STATUS" agencyID="IHE_QRPH" version="1.0">
+				<Name xml:lang="en">PMTCT HIV status</Name>
+				<Code id="165816005**">
+					<Name xml:lang="en">Known HIV positive</Name>
+				</Code>
+				<Code id="165816005*">
+					<Name xml:lang="en">Newly identified HIV Positive</Name>
+				</Code>
+				<Code id="165815009*">
+					<Name xml:lang="en">Newly identified HIV negative</Name>
+				</Code>
+			</Codelist>
+			<Codelist id="CL_PMTCT_ART_STATUS" agencyID="IHE_QRPH" version="1.0">
+				<Name xml:lang="en">PMTCT ART status</Name>
+				<Code id="432101000124108">
+					<Name xml:lang="en">Already on ART</Name>
+				</Code>
+				<Code id="432101000124108*">
+					<Name xml:lang="en">New on ART</Name>
+				</Code>
+			</Codelist>
+		</str:Codelists>
+		<str:Concepts>
+			<!-- ADX Mandatory concepts -->
+			<str:ConceptScheme id="ADX_MANDATORY_CONCEPTS" agencyID="IHE_QRPH" version="1.0">
+				<com:Name xml:lang="en">Mandatory concepts defined by IHE ADX profile</com:Name>
+				<!--
+  There is no default representation for these concepts.  An Agency which makes
+                      use of these to construct an ADX DataStructure has to provide a local representation 
+-->
+				<str:Concept id="dataElement">
+					<com:Name xml:lang="en">Subject of the data measure</com:Name>
+				</str:Concept>
+				<str:Concept id="orgUnit">
+					<com:Name xml:lang="en">Spatial dimension of the measure</com:Name>
+				</str:Concept>
+				<str:Concept id="period">
+					<com:Name xml:lang="en">Temporal dimension of the measure</com:Name>
+				</str:Concept>
+				<!--
+ The value concept is represented by an integer or real number (xsd:decimal)
+-->
+				<str:Concept id="value">
+					<com:Name xml:lang="en">Value of the data measure</com:Name>
+					<str:CoreRepresentation>
+						<str:TextFormat textType="Decimal"/>
+					</str:CoreRepresentation>
+				</str:Concept>
+			</str:ConceptScheme>
+			<ConceptScheme id="IHE_QRPH_CONCEPTS" agencyID="IHE_QRPH" version="1.0">
+				<Name xml:lang="en">IHE_QRPH concepts</Name>
+				<Concept id="PMTCT_ART_STATUS">
+					<Name xml:lang="en">PMTCT ART status</Name>
+					<CoreRepresentation>
+						<Enumeration>
+							<Ref agencyID="IHE_QRPH" version="1.0" id="CL_PMTCT_ART_STATUS"/>
+						</Enumeration>
+					</CoreRepresentation>
+				</Concept>
+				<Concept id="PMTCT_HIV_STATUS">
+					<Name xml:lang="en">PMTCT HIV status</Name>
+					<CoreRepresentation>
+						<Enumeration>
+							<Ref agencyID="IHE_QRPH" version="1.0" id="CL_PMTCT_HIV_STATUS"/>
+						</Enumeration>
+					</CoreRepresentation>
+				</Concept>
+				<Concept id="AGE_GROUP">
+					<Name xml:lang="en">Age group</Name>
+					<CoreRepresentation>
+						<Enumeration>
+							<Ref agencyID="IHE_QRPH" version="1.0" id="CL_AGE_GROUP"/>
+						</Enumeration>
+					</CoreRepresentation>
+				</Concept>
+				<Concept id="SEX">
+					<Name xml:lang="en">Sex</Name>
+					<CoreRepresentation>
+						<Enumeration>
+							<Ref agencyID="IHE_QRPH" version="1.0" id="CL_SEX"/>
+						</Enumeration>
+					</CoreRepresentation>
+				</Concept>
+				<Concept id="PREG_BF">
+					<Name xml:lang="en">Pregnancy/Breastfeeding</Name>
+					<CoreRepresentation>
+						<Enumeration>
+							<Ref agencyID="IHE_QRPH" version="1.0" id="CL_PREG_BF"/>
+						</Enumeration>
+					</CoreRepresentation>
+				</Concept>
+				<Concept id="HIV_TEST_RESULTS">
+					<Name xml:lang="en">HIV test results</Name>
+					<CoreRepresentation>
+						<Enumeration>
+							<Ref agencyID="IHE_QRPH" version="1.0" id="CL_HIV_TEST_RESULTS"/>
+						</Enumeration>
+					</CoreRepresentation>
+				</Concept>
+			</ConceptScheme>
+		</str:Concepts>
+		<str:DataStructures>
+			<str:DataStructure id="DSD_ADX_HIV" agencyID="IHE_QRPH" version="1.0">
+				<com:Name xml:lang="en">{name {ADX HIV}}</com:Name>
+				<str:DataStructureComponents>
+					<str:DimensionList>
+						<str:Dimension id="dataElement">
+							<str:ConceptIdentity>
+								<Ref id="dataElement" maintainableParentID="ADX_MANDATORY_CONCEPTS" maintainableParentVersion="1.0" agencyID="IHE_QRPH"/>
+							</str:ConceptIdentity>
+							<str:LocalRepresentation>
+								<str:Enumeration>
+									<Ref agencyID="IHE_QRPH" id="CL_DATAELEMENT" version="1.0"/>
+								</str:Enumeration>
+							</str:LocalRepresentation>
+						</str:Dimension>
+						<str:Dimension id="orgUnit">
+							<str:ConceptIdentity>
+								<Ref id="orgUnit" maintainableParentID="ADX_MANDATORY_CONCEPTS" maintainableParentVersion="1.0" agencyID="IHE_QRPH"/>
+							</str:ConceptIdentity>
+							<str:LocalRepresentation>
+								<str:Enumeration>
+									<Ref agencyID="IHE_QRPH" id="CL_ORGUNIT" version="1.0"/>
+								</str:Enumeration>
+							</str:LocalRepresentation>
+						</str:Dimension>
+						<str:Dimension id="PMTCT_ART_STATUS">
+							<str:ConceptIdentity>
+								<Ref id="PMTCT_ART_STATUS" maintainableParentID="IHE_QRPH_CONCEPTS" maintainableParentVersion="1.0" agencyID="IHE_QRPH"/>
+							</str:ConceptIdentity>
+						</str:Dimension>
+						<str:Dimension id="PMTCT_HIV_STATUS">
+							<str:ConceptIdentity>
+								<Ref id="PMTCT_HIV_STATUS" maintainableParentID="IHE_QRPH_CONCEPTS" maintainableParentVersion="1.0" agencyID="IHE_QRPH"/>
+							</str:ConceptIdentity>
+						</str:Dimension>
+						<str:Dimension id="AGE_GROUP">
+							<str:ConceptIdentity>
+								<Ref id="AGE_GROUP" maintainableParentID="IHE_QRPH_CONCEPTS" maintainableParentVersion="1.0" agencyID="IHE_QRPH"/>
+							</str:ConceptIdentity>
+						</str:Dimension>
+						<str:Dimension id="SEX">
+							<str:ConceptIdentity>
+								<Ref id="SEX" maintainableParentID="IHE_QRPH_CONCEPTS" maintainableParentVersion="1.0" agencyID="IHE_QRPH"/>
+							</str:ConceptIdentity>
+						</str:Dimension>
+						<str:Dimension id="PREG_BF">
+							<str:ConceptIdentity>
+								<Ref id="PREG_BF" maintainableParentID="IHE_QRPH_CONCEPTS" maintainableParentVersion="1.0" agencyID="IHE_QRPH"/>
+							</str:ConceptIdentity>
+						</str:Dimension>
+						<str:Dimension id="HIV_TEST_RESULTS">
+							<str:ConceptIdentity>
+								<Ref id="HIV_TEST_RESULTS" maintainableParentID="IHE_QRPH_CONCEPTS" maintainableParentVersion="1.0" agencyID="IHE_QRPH"/>
+							</str:ConceptIdentity>
+						</str:Dimension>
+						<str:TimeDimension id="TIME_PERIOD">
+							<str:ConceptIdentity>
+								<Ref id="period" maintainableParentID="ADX_MANDATORY_CONCEPTS" maintainableParentVersion="1.0" agencyID="IHE_QRPH"/>
+							</str:ConceptIdentity>
+							<str:LocalRepresentation>
+								<str:TextFormat textType="TimeRange"/>
+							</str:LocalRepresentation>
+						</str:TimeDimension>
+					</str:DimensionList>
+					<!--
+ These dimensions are identified as being used as outer dimensions
+            of the data.  They must include orgUnit and period.  
+-->
+					<str:Group id="OUTER_DIMENSIONS">
+						<str:GroupDimension>
+							<str:DimensionReference>
+								<Ref id="orgUnit"/>
+							</str:DimensionReference>
+						</str:GroupDimension>
+						<str:GroupDimension>
+							<str:DimensionReference>
+								<Ref id="TIME_PERIOD"/>
+							</str:DimensionReference>
+						</str:GroupDimension>
+					</str:Group>
+					<!--
+ ADX requires that there be a primary measure which is linked to
+            the value concept.  
+-->
+					<str:MeasureList>
+						<str:PrimaryMeasure>
+							<str:ConceptIdentity>
+								<Ref id="value" maintainableParentID="ADX_MANDATORY_CONCEPTS" maintainableParentVersion="1.0" agencyID="IHE"/>
+							</str:ConceptIdentity>
+						</str:PrimaryMeasure>
+					</str:MeasureList>
+				</str:DataStructureComponents>
+			</str:DataStructure>
+		</str:DataStructures>
+	</mes:Structures>
+</mes:Structure>
