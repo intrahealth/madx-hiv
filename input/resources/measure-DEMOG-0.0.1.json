@@ -1,0 +1,75 @@
+{
+    "resourceType": "Measure",
+    "id": "DEMOG-0.0.1",
+    "experimental": true,
+    "disclaimer": "this is just for testing, do not use.",
+    "library": [
+        "Library/DEMOG-0.0.1"
+    ],
+    "relatedArtifact": [
+        {
+            "type": "depends-on",
+            "resource": "Library/library-FHIRHelpers-4.0.1"
+        }
+    ],
+    "scoring": {
+        "coding": [
+            {
+                "system": "http://hl7.org/fhir/measure-scoring",
+                "code": "proportion"
+            }
+        ]
+    },
+    "type": [
+        {
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/measure-type",
+                    "code": "process"
+                }
+            ]
+        }
+    ],
+    "group": [
+        {
+            "population": [
+                {
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                                "code": "initial-population",
+                                "display": "Initial Population"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                                "code": "denominator",
+                                "display": "Denominator"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "supplementalData": [
+        {
+            "usage": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/measure-data-usage",
+                            "code": "supplemental-data"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

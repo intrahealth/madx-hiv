@@ -29,7 +29,7 @@ ENV FHIR=$FHIR
 
 # CMD dockerize -wait ${FHIR}/metadata for FILE in * ; do curl -X POST -H "Content-Type: application/fhir+json" -d @$FILE ${FHIR} ; done
 # errors with dockerize, comment out for now
-CMD for FILE in * ; do curl -X POST -H "Content-Type: application/fhir+json" -d @$FILE ${FHIR} ; done
+CMD for FILE in * ; do curl -s -X POST -H "Content-Type: application/fhir+json" -d @$FILE ${FHIR} ; done
 
 
 

@@ -6,3 +6,9 @@ node_modules/
 
 # dotenv
 .env
+
+# java
+*.jar
+
+# synthea
+synthea/output/fhir

@@ -1,0 +1,70 @@
+{
+    "resourceType": "Library",
+    "id": "DEMOG-0.0.1",
+    "name": "DEMOG",
+    "version": "0.0.1",
+    "status": "draft",
+    "experimental": true,
+    "type": "logic-library",
+    "url": "http://somewhere.org/fhir/Library/DEMOG",
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem",
+            "valueReference": {
+                "reference": "#cqf-tooling"
+            }
+        }
+    ],
+    "relatedArtifact": [
+        {
+            "type": "depends-on",
+            "resource": "http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1"
+        },
+        {
+            "type": "depends-on",
+            "resource": "http://hl7.org/fhir/Library/FHIRHelpers|4.0.1"
+        }
+    ],
+    "parameter": [
+        {
+            "name": "Patient",
+            "use": "out",
+            "min": 0,
+            "max": "1",
+            "type": "Patient"
+        },
+        {
+            "name": "Initial Population",
+            "use": "out",
+            "min": 0,
+            "max": "1",
+            "type": "boolean"
+        },
+        {
+            "name": "Denominator",
+            "use": "out",
+            "min": 0,
+            "max": "1",
+            "type": "boolean"
+        },
+    ],
+    "dataRequirement": [
+        {
+
+        }
+    ],
+    "content": [
+        {
+            "contentType": "text/cql",
+            "data": ""
+        },
+        {
+            "contentType": "application/elm+xml",
+            "data": ""
+        },
+        {
+            "contentType": "application/elm+json",
+            "data": ""
+        }
+    ]
+}
