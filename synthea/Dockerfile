@@ -8,8 +8,8 @@ ARG POP=100
 RUN java -jar synthea-with-dependencies-jdk8.jar \
     -p ${POP} \
     # --exporter.fhir.bulk_data true \
-    -m hiv* \
     -d madx-hiv/synthea \
+    -m hiv* \
     # seed to create the same patients every time
     -s 123
 
