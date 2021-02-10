@@ -58,15 +58,10 @@ DiagnosticReport for HIV tests and death certs
 curl -s http://localhost:8080/fhir/DiagnosticReport | jq '.entry[] | .resource.code, .resource.subject.reference, .resource.encounter.reference, .resource.result[]'
 ```
 
-Observations
+Observation
 ```bash
-
+curl -s http://localhost:8080/fhir/Observation?_content=HIV | jq '.entry[] | .resource.code.coding[], .resource.subject.reference, .resource.encounter.reference, .resource.valueCodeableConcept[]'
 ```
-
-
-
-curl -s http://localhost:8080/fhir/Patient | jq '.entry[].resource | .gender, .birthDate'
-
 
 ## Run Directly from JAR
 
