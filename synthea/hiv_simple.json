@@ -1,21 +1,12 @@
 {
-  "name": "HIV Simple",
+  "name": "HIV Simple 2",
   "remarks": [
     "Module is a proof-of-concept, do not use outside of experimentation."
   ],
   "states": {
     "Initial": {
       "type": "Initial",
-      "distributed_transition": [
-        {
-          "transition": "HIV Test Positive",
-          "distribution": 0.5
-        },
-        {
-          "transition": "HIV Test Negative",
-          "distribution": 0.5
-        }
-      ]
+      "direct_transition": "Years Before Infection"
     },
     "Terminal": {
       "type": "Terminal"
@@ -30,16 +21,7 @@
           "display": "HIV Positive"
         }
       ],
-      "distributed_transition": [
-        {
-          "transition": "ART Medication",
-          "distribution": 0.5
-        },
-        {
-          "transition": "Delay",
-          "distribution": 0.5
-        }
-      ]
+      "direct_transition": "HIV Test Positive"
     },
     "ART Medication": {
       "type": "MedicationOrder",
@@ -69,7 +51,8 @@
             {
               "system": "LOINC",
               "code": "75622-1",
-              "display": "LOINC Code"
+              "display": "LOINC Code",
+              "value_set": ""
             }
           ],
           "value_code": {
@@ -79,7 +62,16 @@
           }
         }
       ],
-      "direct_transition": "Has HIV"
+      "distributed_transition": [
+        {
+          "transition": "ART Medication",
+          "distribution": 0.5
+        },
+        {
+          "transition": "Delay",
+          "distribution": 0.5
+        }
+      ]
     },
     "HIV Test Negative": {
       "type": "DiagnosticReport",
@@ -98,7 +90,8 @@
             {
               "system": "LOINC",
               "code": "75622-1",
-              "display": "LOINC Code"
+              "display": "LOINC Code",
+              "value_set": "2.16.840.1.113762.1.4.1056.50"
             }
           ],
           "value_code": {
@@ -112,11 +105,12 @@
     },
     "Delay": {
       "type": "Delay",
-      "exact": {
-        "quantity": 4,
+      "direct_transition": "Death",
+      "range": {
+        "low": 7,
+        "high": 10,
         "unit": "years"
-      },
-      "direct_transition": "Death"
+      }
     },
     "Death": {
       "type": "Death",
@@ -125,6 +119,24 @@
         "unit": "days"
       },
       "direct_transition": "Terminal"
+    },
+    "Years Before Infection": {
+      "type": "Delay",
+      "range": {
+        "low": 15,
+        "high": 65,
+        "unit": "years"
+      },
+      "distributed_transition": [
+        {
+          "transition": "Has HIV",
+          "distribution": 0.5
+        },
+        {
+          "transition": "HIV Test Negative",
+          "distribution": 0.5
+        }
+      ]
     }
   }
 }
