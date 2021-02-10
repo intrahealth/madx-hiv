@@ -27,7 +27,7 @@
         {
           "system": "SNOMED-CT",
           "code": 86406008,
-          "display": "HIV Status"
+          "display": "HIV Positive"
         }
       ],
       "distributed_transition": [

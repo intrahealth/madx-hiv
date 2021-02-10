@@ -25,14 +25,48 @@ docker build -t stuff --build-arg POP=200 .
 docker run stuff
 ```
 
-## Verify FHIR Resources are Loaded
+## Sanity checks on FHIR Resources
+
+> Install the awesome [jq](https://stedolan.github.io/jq/download/) for fast and more intuitive parsing.
+
+Summary stats:
 
 ```bash
-# how many patients
-curl http://localhost:8080/fhir/Patient?_summary=count
-# condition resources with HIV
-curl http://localhost:8080/fhir/Condition?_content=HIV
+curl -s http://localhost:8080/fhir/Patient?_summary=count | jq '{Patient: .total}'
+curl -s http://localhost:8080/fhir/Condition?_summary=count | jq '{Condition: .total}'
+curl -s http://localhost:8080/fhir/Encounter?_summary=count | jq '{Encounter: .total}'
+curl -s http://localhost:8080/fhir/DiagnosticReport?_summary=count | jq '{DiagnosticReport: .total}'
+curl -s http://localhost:8080/fhir/Observation?_summary=count | jq '{Observation: .total}'
 ```
+
+Patient
+```bash
+# Key info from Patient
+# curl -s http://localhost:8080/fhir/Patient | jq '.entry[].resource.id, .entry[].resource | {gender: .gender, birthDate: .birthDate, deceasedDateTime: .deceasedDateTime}'
+curl -s http://localhost:8080/fhir/Patient | jq '.entry[] | {id: .resource.id, gender: .resource.gender, birthDate: .resource.birthDate, deceasedDateTime: .resource.deceasedDateTime}'
+```
+
+Condition with HIV
+```bash
+curl http://localhost:8080/fhir/Condition?_content=HIV
+# see all conditions
+curl -s http://localhost:8080/fhir/Condition | jq '.entry[] | .resource.code[], .resource.subject.reference, .resource.encounter.reference'
+```
+
+DiagnosticReport for HIV tests and death certs
+```bash
+curl -s http://localhost:8080/fhir/DiagnosticReport | jq '.entry[] | .resource.code, .resource.subject.reference, .resource.encounter.reference, .resource.result[]'
+```
+
+Observations
+```bash
+
+```
+
+
+
+curl -s http://localhost:8080/fhir/Patient | jq '.entry[].resource | .gender, .birthDate'
+
 
 ## Run Directly from JAR
 

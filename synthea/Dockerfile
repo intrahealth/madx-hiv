@@ -8,6 +8,8 @@ ARG POP=100
 RUN java -jar synthea-with-dependencies-jdk8.jar \
     -p ${POP} \
     # --exporter.fhir.bulk_data true \
+    # keep all patient history
+    --exporter.years_of_history 0 \
     -d madx-hiv/synthea \
     -m hiv* \
     # seed to create the same patients every time
