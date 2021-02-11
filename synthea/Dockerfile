@@ -24,7 +24,7 @@ FROM curlimages/curl:7.74.0
 # COPY --from=0 /usr/local/bin/dockerize /usr/local/bin/
 USER curl_user
 WORKDIR /home/curl_user
-COPY --from=0 madx-hiv/synthea/output/fhir/* .
+COPY --from=0 output/fhir/* .
 
 ARG FHIR=http://host.docker.internal:8080/fhir
 ENV FHIR=$FHIR

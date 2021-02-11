@@ -1,4 +1,4 @@
-# Simple HIV Synthea Module
+# Simple HIV Synthea module
 
 This is a simple and experimental module for generating persons with HIV for the [synthea](https://github.com/synthetichealth/synthea) fake data generator. It is very naive and is not ready for merging into Synthea.
 
@@ -11,7 +11,7 @@ There is a build var `POP` as population created at buildtime not runtime; and a
 Run the hosted build. On run it loads patients into the `host.docker.internal:8080/fhir` endpoint. This can be changed using an environment variable, `FHIR`.
 ```bash
 docker run intrahealth/synthea-hiv:latest
-# same as intrahealth/synthea-hiv:100
+# same as intrahealth/synthea-hiv:pop100
 ```
 
 There is also an image with 1000 patients, use:
@@ -63,30 +63,42 @@ Observation
 curl -s http://localhost:8080/fhir/Observation?_count=10000&_content=HIV | jq '.entry[] | .resource.code.coding[], .resource.subject.reference, .resource.encounter.reference, .resource.valueCodeableConcept[]'
 ```
 
-## Run Directly from JAR (for CQL test cases)
+## Create patients directly from JAR for supporting IG test cases
 
+* Clone this repo
+* Change into this directory
 * Download the latest release of Synthea, which at this moment is:
 ```
 wget https://github.com/synthetichealth/synthea/releases/download/v2.7.0/synthea-with-dependencies.jar
 ```
-* Download the raw JSON file of the module or clone the repo and git pull for future updates.
 
-* Generate patients in the current directory. If necessary change to your local modules path (-d). This example runs in the directory with the modules inside it.
+Generate patients in the current directory.
+* `--exporter.use_uuid_filenames true` uses only the UUID as filenames.
+* `--exporter.years_of_history 0` generates all patient history.
+* `-d modules/` adds the local module path `modules`.
+* `-m hiv*` says to only create patients in `hiv*` module.
+* `-s 123` uses a seed to create the same dataset every time.
 ```bash
-java -jar synthea-with-dependencies.jar -p 100 -d modules/ -m hiv* -s 123 --exporter.years_of_history 0 --exporter.years_of_history 0
+java -jar synthea-with-dependencies.jar -p 100 -d modules/ -m hiv* -s 123 --exporter.years_of_history 0 --exporter.years_of_history 0 --exporter.use_uuid_filenames true
 ```
 The patient records in FHIR are in `output/fhir`
-
-To rename the files for use in testing IGs:
-```bash
-find . -name '*.json' | while read fname; do
-    newname=$(jq -r '.billingAccountList[0]' "${fname}").json
-    mv "${fname}" "${newname}"
-done
+```
+cd output/fhir
 ```
 
-One-liner to put bundles into HAPI:
+Now a one-liner to put bundles into HAPI:
 ```bash
 for FILE in *; do curl -X POST -H "Content-Type: application/fhir+json;charset=utf-8" -d @$FILE http://localhost:8080/fhir ; done
 ```
+Or... to rename the files for use in testing IGs, each patient bundle must have its own folder.
+```bash
+for x in ./*.json; do mkdir "${x%.*}" && mv "$x" "${x%.*}" && mv ; done
+```
+Then remove for now the practitioner and hospital bundles as they can't be processed in IG publisher
+```
+rm -r output/fhir/hospital*
+rm -r output/fhir/practitioner*
+```
+
+Now you are ready to copy the folders into the IG for testing.
 
