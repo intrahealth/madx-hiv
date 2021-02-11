@@ -1,16 +1,16 @@
 FROM openjdk:8-jre-alpine3.9
 RUN apk --no-cache add openssl wget git curl
-RUN wget https://github.com/synthetichealth/synthea/releases/download/v2.6.1/synthea-with-dependencies-jdk8.jar
+RUN wget https://github.com/synthetichealth/synthea/releases/download/v2.7.0/synthea-with-dependencies.jar
 RUN git clone https://github.com/intrahealth/madx-hiv.git
 
 ARG POP=100
 
-RUN java -jar synthea-with-dependencies-jdk8.jar \
+RUN java -jar synthea-with-dependencies.jar \
     -p ${POP} \
     # --exporter.fhir.bulk_data true \
     # keep all patient history
     --exporter.years_of_history 0 \
-    -d madx-hiv/synthea \
+    -d madx-hiv/synthea/modules \
     -m hiv* \
     # seed to create the same patients every time
     -s 123
@@ -24,7 +24,7 @@ FROM curlimages/curl:7.74.0
 # COPY --from=0 /usr/local/bin/dockerize /usr/local/bin/
 USER curl_user
 WORKDIR /home/curl_user
-COPY --from=0 output/fhir/* .
+COPY --from=0 madx-hiv/synthea/output/fhir/* .
 
 ARG FHIR=http://host.docker.internal:8080/fhir
 ENV FHIR=$FHIR

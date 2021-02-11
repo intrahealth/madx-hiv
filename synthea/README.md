@@ -63,20 +63,27 @@ Observation
 curl -s http://localhost:8080/fhir/Observation?_count=10000&_content=HIV | jq '.entry[] | .resource.code.coding[], .resource.subject.reference, .resource.encounter.reference, .resource.valueCodeableConcept[]'
 ```
 
-## Run Directly from JAR
+## Run Directly from JAR (for CQL test cases)
 
 * Download the latest release of Synthea, which at this moment is:
 ```
-wget https://github.com/synthetichealth/synthea/releases/download/v2.6.1/synthea-with-dependencies-jdk8.jar
+wget https://github.com/synthetichealth/synthea/releases/download/v2.7.0/synthea-with-dependencies.jar
 ```
 * Download the raw JSON file of the module or clone the repo and git pull for future updates.
 
 * Generate patients in the current directory. If necessary change to your local modules path (-d). This example runs in the directory with the modules inside it.
 ```bash
-java -jar synthea-with-dependencies-jdk8.jar -p 100 -d ./ -m hiv* -m pregnancy* -s 123
+java -jar synthea-with-dependencies.jar -p 100 -d modules/ -m hiv* -s 123 --exporter.years_of_history 0 --exporter.years_of_history 0
 ```
-
 The patient records in FHIR are in `output/fhir`
+
+To rename the files for use in testing IGs:
+```bash
+find . -name '*.json' | while read fname; do
+    newname=$(jq -r '.billingAccountList[0]' "${fname}").json
+    mv "${fname}" "${newname}"
+done
+```
 
 One-liner to put bundles into HAPI:
 ```bash
