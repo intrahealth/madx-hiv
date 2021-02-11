@@ -23,17 +23,6 @@
       ],
       "direct_transition": "HIV Test Positive"
     },
-    "ART Medication": {
-      "type": "MedicationOrder",
-      "codes": [
-        {
-          "system": "RxNorm",
-          "code": "1234",
-          "display": "RxNorm Code"
-        }
-      ],
-      "direct_transition": "Terminal"
-    },
     "HIV Test Positive": {
       "type": "DiagnosticReport",
       "codes": [
@@ -64,8 +53,8 @@
       ],
       "distributed_transition": [
         {
-          "transition": "ART Medication",
-          "distribution": 0.5
+          "distribution": 0.5,
+          "transition": "ART Treatment Plan"
         },
         {
           "transition": "Delay",
@@ -137,6 +126,45 @@
           "distribution": 0.5
         }
       ]
+    },
+    "ART Treatment Plan": {
+      "type": "CarePlanStart",
+      "codes": [
+        {
+          "system": "SNOMED-CT",
+          "code": 432101000124108,
+          "display": "History of antiretroviral therapy (situation)"
+        }
+      ],
+      "direct_transition": "Viral Load Test"
+    },
+    "Viral Load Test": {
+      "type": "DiagnosticReport",
+      "codes": [
+        {
+          "system": "LOINC",
+          "code": "25836-8",
+          "display": "HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection"
+        }
+      ],
+      "observations": [
+        {
+          "category": "laboratory",
+          "unit": "Copies/mL",
+          "codes": [
+            {
+              "system": "LOINC",
+              "code": "25836-8",
+              "display": "HIV 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection"
+            }
+          ],
+          "range": {
+            "low": 200,
+            "high": 1000000
+          }
+        }
+      ],
+      "direct_transition": "Terminal"
     }
   }
 }

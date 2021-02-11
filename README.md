@@ -15,33 +15,31 @@ The following is the status of what codesystems/valuesets are generated:
 ### Added
 
 HIV Test Results (from mADX and other sources)
-```
-code "HIV Negative": code '165815009' from "SNOMED-CT"
-code "HIV Positive": code '165816005' from "SNOMED-CT"
-code "HIV 1 and 2 tests - Meaningful Use set": '75622-1' from "LOINC"
-```
+* code "HIV Negative": code '165815009' from "SNOMED-CT"
+* code "HIV Positive": code '165816005' from "SNOMED-CT"
+* code "HIV 1 and 2 tests - Meaningful Use set": '75622-1' from "LOINC"
 
 ConditionOnset: HIV infection (may be useful)
-```
-SNOMED-CT 86406008
-```
+* SNOMED-CT 86406008
+
+History of ART Therapy (Needs valueset and distribution of adherence)
+* code "History of antiretroviral therapy (situation)": '432101000124108' from "SNOMED-CT"
+(http://purl.bioontology.org/ontology/SNOMEDCT/432101000124108)
+
+Viral load
+* LOINC codes of 25836-8 (copies/mL)
+* Suppressed viral load (<1000 copies/mL)
+* Used range of 200 (very low) -> 1000000 (very high)
+
 
 ### Not added
 
-History of ART Therapy (it is unclear which valueset this represents)
-```
-code "History of antiretroviral therapy (situation)": '432101000124108' from "SNOMED-CT"
-(http://purl.bioontology.org/ontology/SNOMEDCT/432101000124108)
-```
-
 Pregnancy, breastfeeding
-* The pregnancy module could be adapted.
-* These valuesets are apparently out of use:
+* The pregnancy module could be adopted but named valuesets are apparently out of use:
 https://phinvads.cdc.gov/vads/ViewCodeSystemConcept.action?oid=2.16.840.1.113883.6.96&code=146789000
-```
-code "Pregnant": '146789000' from "SNOMED-CT"
-code "Breastfeeding": '169750002' from "SNOMED-CT"
-```
+* Apparently out of use:
+    code "Pregnant": '146789000' from "SNOMED-CT"
+    code "Breastfeeding": '169750002' from "SNOMED-CT"
 
 
 ## Tests
